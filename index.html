@@ -1,71 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Local Pet Adoption Service</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Main navigation for the website -->
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="gallery.html">Gallery</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="about.html">About</a>
-    </nav>
 
-    <!-- Page title and introduction -->
-    <h1>Local Pet Adoption Service</h1>
-    <p>Welcome to our adoption center, where loving pets find forever homes.</p>
+<head>
+    <title>Great Cliffs of California</title>
+    <meta charset="utf-8">
 
-    <h2>About Our Mission</h2>
-    <p>
-      We believe every pet deserves a safe, caring home. Our team helps match
-      animals with families who can provide comfort, food, and affection.
-    </p>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- List of pets currently available for adoption -->
-    <h2>Available Pets</h2>
-    <ul>
-      <li>Buddy : a friendly golden retriever</li>
-      <li>Mittens : a playful tabby cat</li>
-      <li>Rocky : a loyal mixed-breed dog</li>
-    </ul>
+<body id="home">
+    <div class="container">
 
-    <h2>Why Adopt?</h2>
-    <p>
-      Adopting a pet saves a life and gives you a companion for years to come.
-      Visit our <a href="contact.html">contact page</a> to learn more.
-    </p>
+        <header>
+            <div class="main-header">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+                </div>
 
-    <!-- Featured pet photos -->
-    <h2>Meet Some of Our Pets</h2>
-    <img src="images/dog.jpg" alt="A happy dog with a person" width="300" />
+                <nav class="main-menu">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="cliffs.html">Cliffs</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <img src="images/cat.jpg" alt="A playful cat sitting indoors" width="300" />
+        <section id="timeofday">
+            <span> Your Current Local Time: </span>
+            <span id="clock"></span>
+        </section>
 
-    <!-- Simple adoption process overview -->
-    <h2>Adoption Timeline</h2>
-    <p>This page documents our adoption service and highlights available pets for potential families.</p>
+        <main>
+            <h1>Introducing California's Greatest Cliffs</h1>
 
-    <table border="1" cellpadding="8" cellspacing="0">
-      <tr>
-        <th>Step</th>
-        <th>What Happens</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Application review</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Meet and greet with the pet</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Adoption paperwork and home visit</td>
-      </tr>
-    </table>
-  </body>
+            <h2>What is so unique about California cliffs?</h2>
+            <p>California cliffs are one of a kind in the United States where no cliffs are as magnificent and beautiful
+                as them. And California is the only state that have cliffs that fronts all possible environments: sea,
+                river, mountains and canyons. There are four such individual unique cliffs: West Cliff, North Cliff,
+                East Cliff and South Cliff. All offer fantastic overlooking views, recreational areas, camping sites,
+                wildlife watch spots and overnight cabins.</p>
+
+            <h2>Where are these cliffs?</h2>
+            <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. The
+                closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
+        </main>
+
+        <section>
+            <ul id="partners">
+                <!-- <li class="partner">
+                    <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
+                </li> -->
+            </ul>
+        </section>
+
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">
+                    &copy; Copyright 2020 :: GreatCliffs.com
+                </div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff University.
+                    All contents are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Javascript Code -->
+    <script>
+        //create a time data function to display the current time
+        function currentTime() {
+            //Declare variables
+            var d = new Date(); //Get current date
+            var hr = d.getHours(); //Get current hour
+            var min = d.getMinutes(); //Get current minute
+            var sec = d.getSeconds(); //Get current second
+            var ampm; //Declare ampm variable
+
+            var gmthr = d.getUTCHours(); //Get current GMT hour (military time)
+            var gmtampm; //Declare GMT AM/PM variable
+            var timeDiff; // To store time difference between UTC and local time
+            var adjTimeDiff; // To store time difference converted to positive number
+            var timeZone; // To store the 4 timezones
+
+            //Add 0 to single digits for seconds
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
+
+            // Add 0 to single digits for minutes
+            if (min < 10) {
+                min = "0" + min;
+            }
+
+            //Convert GMT from military time to standard time
+            if (gmthr == 0) {
+                gmthr = 12;
+                gmtampm = "AM";
+            } else if (gmthr < 12) {
+                gmtampm = "AM";
+            } else if (gmthr == 12) {
+                gmtampm = "PM";
+            } else {
+                gmthr -= 12;
+                gmtampm = "PM";
+            }
+
+            //Determine AM or PM
+            if (hr == 0) {
+                hr = 12;
+                ampm = "AM";
+            } else if (hr == 12) {
+                ampm = "PM"; //Set to PM
+            } else if (hr > 12) {
+                hr -= 12; //Deduct 12 from hours greater than 12 (military time)
+                ampm = "PM";
+            } else {
+                ampm = "AM";
+            }
+
+            //Calculate time difference between GMT hour and local hour
+            timeDiff = d.getUTCHours() - d.getHours();
+
+            //Convert negative time difference to positive
+            if (timeDiff < 0) {
+                adjTimeDiff = -timeDiff;
+            } else {
+                adjTimeDiff = timeDiff;
+            }
+
+            //Normalize wrapped values (ex: 16 should become 8)
+            if (adjTimeDiff > 12) {
+                adjTimeDiff = 24 - adjTimeDiff;
+            }
+
+            //Check timezone based on adjusted time difference
+            switch (adjTimeDiff) {
+                case 7:
+                    timeZone = "PST";
+                    break;
+                case 6:
+                    timeZone = "MST";
+                    break;
+                case 5:
+                    timeZone = "CST";
+                    break;
+                case 4:
+                    timeZone = "EST";
+                    break;
+                default:
+                    timeZone = "GMT";
+            }
+
+            var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone; //Create time string with timezone
+
+            document.getElementById("clock").innerText = time; //Display time in clock span
+        }
+
+        currentTime(); //Call currentTime function to display time immediately
+
+        setInterval(currentTime, 1000); //Call currentTime function every second
+
+        // Day 2 Homework
+
+        (function () {
+            var partners = [
+                { src: "images/partners/partner-bustour.png", alt: "Partner Bus Tours" },
+                { src: "images/partners/partner-cabinrental.png", alt: "Partner Cabin Rental" },
+                { src: "images/partners/partner-campingadv.png", alt: "Partner Camping Adventure" },
+                { src: "images/partners/partner-collegetours.png", alt: "Partner College Tours" },
+                { src: "images/partners/partner-rentalbike.png", alt: "Partner Bike Rentals" },
+                { src: "images/partners/partner-tourgroup.png", alt: "Partner Tour Group" }
+            ];
+
+            var partnersList = document.getElementById("partners");
+
+            partners.forEach(function (partner) {
+                var li = document.createElement("li");
+                li.className = "partner";
+
+                var img = document.createElement("img");
+                img.src = partner.src;
+                img.alt = partner.alt;
+
+                li.appendChild(img);
+                partnersList.appendChild(li);
+            });
+        })();
+    </script>
+</body>
+
 </html>
