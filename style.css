@@ -328,3 +328,10 @@ legend {
 .submit-container input[type="submit"]:hover {
     background-color: #336699;
 }
+
+.submit-container input[type="submit"]:disabled {
+    background-color: transparent;
+    color: #666;
+    border: 1px solid #999;
+    cursor: not-allowed;
+}

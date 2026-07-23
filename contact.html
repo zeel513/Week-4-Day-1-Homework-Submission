@@ -4,130 +4,134 @@
 <!-- Head Section: Contains metadata and page title -->
 
 <head>
-    <title>Great Cliffs of California</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+  <title>Great Cliffs of California</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="contact">
-    <!-- Main Container: Wraps all page content -->
-    <div class="container">
+  <!-- Main Container: Wraps all page content -->
+  <div class="container">
 
-        <!-- Header Section: Contains logo and main navigation menu -->
-        <header>
-            <div class="main-header">
-                <!-- Logo Area -->
-                <div class="logo">
-                    <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
-                </div>
+    <!-- Header Section: Contains logo and main navigation menu -->
+    <header>
+      <div class="main-header">
+        <!-- Logo Area -->
+        <div class="logo">
+          <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+        </div>
 
-                <!-- Navigation Menu -->
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="cliffs.html">Cliffs</a></li>
-                        <li><a href="activities.html">Activities</a></li>
-                        <li class="active"><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <!-- Navigation Menu -->
+        <nav class="main-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cliffs.html">Cliffs</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <!-- Main Content Section: Contains page title and informational content -->
-       <main>
-    <h1>Contacting Us</h1>
-    <p>You can drop by the visitors information center at the cliff site that you plan on visiting. They are open 7 days a week from 8:00AM to 5:00PM. You can also contact us directly if you need additional information about the Cliffs, Hours of Operations, Facilities or questions about this site using one of the following:</p>
+    <!-- Main Content Section: Contains page title and informational content -->
+    <main>
+      <h1>Contacting Us</h1>
+      <p>You can drop by the visitors information center at the cliff site that you plan on visiting. They are open 7
+        days a week from 8:00AM to 5:00PM. You can also contact us directly if you need additional information about the
+        Cliffs, Hours of Operations, Facilities or questions about this site using one of the following:</p>
 
-    <p><strong>Phone:</strong> (800)GCLIFFS<br>
-    <strong>Email:</strong> info@greatcliffs.com</p>
+      <p><strong>Phone:</strong> (800)GCLIFFS<br>
+        <strong>Email:</strong> info@greatcliffs.com
+      </p>
 
-    <form action="/contact" method="post">
+      <form action="/contact" method="post">
         <fieldset>
-            <legend>CONTACT FORM</legend>
-            
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="John Doe">
-            </div>
+          <legend>CONTACT FORM</legend>
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com">
-            </div>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe">
+          </div>
 
-            <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx">
-            </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="johndoe@gmail.com">
+          </div>
 
-            <div class="form-group inline-group">
-                <label>How should we contact you?</label>
-                <input type="radio" id="contact_email" name="contact_method" value="email" checked>
-                <label for="contact_email" class="light-label">Email</label>
-                <input type="radio" id="contact_phone" name="contact_method" value="phone">
-                <label for="contact_phone" class="light-label">Phone</label>
-            </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx">
+          </div>
 
-            <div class="form-group inline-group">
-                <label for="cliff">Which Cliff are you inquiring?</label>
-                <select id="cliff" name="cliff">
-                    <option value="west">West Cliff</option>
-                    <option value="north">North Cliff</option>
-                    <option value="east">East Cliff</option>
-                    <option value="south">South Cliff</option>
-                </select>
-            </div>
+          <div class="form-group inline-group">
+            <label>How should we contact you?</label>
+            <input type="radio" id="contact_email" name="contact_method" value="email" checked>
+            <label for="contact_email" class="light-label">Email</label>
+            <input type="radio" id="contact_phone" name="contact_method" value="phone">
+            <label for="contact_phone" class="light-label">Phone</label>
+          </div>
 
-            <div class="form-group">
-                <label for="hear">How did you hear about us:</label>
-                <textarea id="hear" name="hear" rows="6"></textarea>
-            </div>
+          <div class="form-group inline-group">
+            <label for="cliff">Which Cliff are you inquiring?</label>
+            <select id="cliff" name="cliff">
+              <option value="west">West Cliff</option>
+              <option value="north">North Cliff</option>
+              <option value="east">East Cliff</option>
+              <option value="south">South Cliff</option>
+            </select>
+          </div>
 
-            <!-- Random Codes -->
-            <div class="randomcode">
-              <input type="text" name="randomcode" placeholder="Enter characters">
-              <p id="codes"></p>
-            </div>
+          <div class="form-group">
+            <label for="hear">How did you hear about us:</label>
+            <textarea id="hear" name="hear" rows="6"></textarea>
+          </div>
 
-            <div class="submit-container">
-                <input type="submit" value="Inquire">
-            </div>
+          <!-- Random Codes -->
+          <div class="randomcode">
+            <input type="text" id="randomcode" name="randomcode" placeholder="Enter characters">
+            <p id="codes"></p>
+          </div>
+
+          <div class="submit-container">
+            <input id="submit" type="submit" value="Inquire">
+          </div>
         </fieldset>
-    </form>
-</main>
+      </form>
+    </main>
 
-        <!-- Partners Section: Displays list of partner logos/images -->
-        <section>
-            <!-- Partner List: Contains logos for all vendor partners -->
-            <ul id="partners">
-            </ul>
-        </section>
+    <!-- Partners Section: Displays list of partner logos/images -->
+    <section>
+      <!-- Partner List: Contains logos for all vendor partners -->
+      <ul id="partners">
+      </ul>
+    </section>
 
-        <!-- Footer Section: Contains copyright, social media links, and disclaimer -->
-        <footer>
-            <!-- Footer Content: Copyright and social media links -->
-            <div id="nondisclaimer">
-                <!-- Copyright Information -->
-                <div class="copy">
-                    &copy; Copyright 2020 :: GreatCliffs.com
-                </div>
-                <!-- Social Media Links -->
-                <div class="social">
-                    <a href="#">Facebook Image</a>
-                    <a href="#">Instagram Image</a>
-                    <a href="#">Twitter Image</a>
-                </div>
-            </div>
+    <!-- Footer Section: Contains copyright, social media links, and disclaimer -->
+    <footer>
+      <!-- Footer Content: Copyright and social media links -->
+      <div id="nondisclaimer">
+        <!-- Copyright Information -->
+        <div class="copy">
+          &copy; Copyright 2020 :: GreatCliffs.com
+        </div>
+        <!-- Social Media Links -->
+        <div class="social">
+          <a href="#">Facebook Image</a>
+          <a href="#">Instagram Image</a>
+          <a href="#">Twitter Image</a>
+        </div>
+      </div>
 
-            <!-- Disclaimer Section -->
-            <div id="disclaimer">
-                <p>This website is designed and created solely for educational purposes only at Westcliff University.
-                    All contents are not intended for any commercial gain or use.</p>
-            </div>
-        </footer>
+      <!-- Disclaimer Section -->
+      <div id="disclaimer">
+        <p>This website is designed and created solely for educational purposes only at Westcliff University.
+          All contents are not intended for any commercial gain or use.</p>
+      </div>
+    </footer>
 
-    </div>
-    <script src="js/site_scripts.js"></script>
+  </div>
+  <script src="js/site_scripts.js"></script>
+  <script src="js/randomcodes.js"></script>
 </body>
 
 </html>
