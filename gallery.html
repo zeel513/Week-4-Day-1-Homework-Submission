@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="gallery.html">Gallery</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="about.html">About</a>
+    </nav>
+
+    <h1>Adoption Center Gallery</h1>
+    <p>Browse a collection of cheerful moments from our shelter and the pets waiting for their forever homes.</p>
+
+    <ul id="gallery-list" class="gallery-grid"></ul>
+
+    <script>
+      const captions = [
+        "Golden retriever in the garden",
+        "Gray cat by the window",
+        "Playful puppy at the park",
+        "Friendly dog on a walk",
+        "Cozy cat nap",
+        "Curious puppy in the grass",
+        "Curious cat portrait",
+        "Happy mixed-breed dog",
+        "Kitten playing joyfully",
+        "Sweet companion dog"
+      ];
+
+      const descTexts = [
+        "A happy dog playing outdoors with bright sunshine.",
+        "A calm cat enjoying a quiet afternoon by the window.",
+        "A cheerful puppy running freely in the park.",
+        "A friendly dog greeting visitors during a walk.",
+        "A sleepy cat resting comfortably on a warm blanket.",
+        "A curious puppy exploring the grass with excitement.",
+        "A playful cat looking up with bright eyes.",
+        "A lovable mixed-breed dog wagging happily.",
+        "A tiny kitten chasing toys with endless energy.",
+        "A sweet dog wearing a red collar and friendly smile."
+      ];
+
+      const alts = [
+        "Golden retriever enjoying the sunshine",
+        "Gray cat resting on a window seat",
+        "Playful puppy running outdoors",
+        "Smiling dog on a leash",
+        "Cat enjoying a cozy blanket",
+        "Adorable puppy sitting in grass",
+        "Cat looking into the camera",
+        "Brown dog with floppy ears",
+        "Kitten playing with a toy",
+        "Small dog wearing a red collar"
+      ];
+
+      const openCaptionTag = '<div class="caption">';
+      const closeCaptionTag = '</div>';
+      const openDescTag = '<div class="description">';
+      const closeDescTag = '</div>';
+
+      const galleryList = document.getElementById("gallery-list");
+
+      for (let i = 0; i < 10; i++) {
+        const listItem = document.createElement("li");
+        listItem.className = "gallery-card";
+
+        const image = document.createElement("img");
+        image.className = "photo";
+        image.src = "images/pet" + (i + 1) + ".jpg";
+        image.alt = alts[i];
+        image.width = 240;
+        image.height = 240;
+        image.loading = "lazy";
+
+        const caption = document.createElement("p");
+        caption.textContent = captions[i];
+        caption.className = "gallery-caption";
+
+        const description = document.createElement("div");
+        description.className = "description";
+        description.textContent = descTexts[i];
+
+        listItem.appendChild(image);
+        listItem.appendChild(caption);
+        listItem.appendChild(description);
+        galleryList.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>
